@@ -1,0 +1,416 @@
+{
+  "app": {
+    "name": "Foxus Code",
+    "tagline": "Digital Forms with QR Codes"
+  },
+  "common": {
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "submitting": "Submitting...",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "close": "Close",
+    "open": "Open",
+    "copy": "Copy",
+    "share": "Share",
+    "download": "Download",
+    "upload": "Upload",
+    "select": "Select",
+    "required": "Required",
+    "optional": "Optional",
+    "yes": "Yes",
+    "no": "No",
+    "confirm": "Confirm",
+    "settings": "Settings",
+    "help": "Help",
+    "language": "Language",
+    "field": "Field",
+    "fields": "Fields",
+    "actions": "Actions",
+    "poweredBy": "Powered by",
+    "backToHome": "Back to Home"
+  },
+  "auth": {
+    "login": "Login",
+    "logout": "Logout",
+    "register": "Register",
+    "welcomeTo": "Welcome to",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "forgotPassword": "Forgot Password?",
+    "signInWithEmail": "Sign in with Email",
+    "signUpWithEmail": "Sign up with Email",
+    "alreadyHaveAccount": "Already have an account?",
+    "dontHaveAccount": "Don't have an account?",
+    "resetPassword": "Reset Password",
+    "checkEmail": "Please check your email",
+    "invalidCredentials": "Invalid email or password",
+    "emailRequired": "Email is required",
+    "passwordRequired": "Password is required",
+    "weakPassword": "Password is too weak",
+    "emailInvalid": "Invalid email format",
+    "signInDescription": "Sign in to create and manage your digital forms",
+    "emailPlaceholder": "Enter your email",
+    "passwordPlaceholder": "Enter your password",
+    "namePlaceholder": "Enter your name",
+    "emailConfirmed": "Email Confirmed!",
+    "emailConfirmedDescription": "Your email has been successfully verified. Welcome to Foxus Code!",
+    "accountActivated": "Your account is now activated",
+    "canStartCreating": "You can now start creating and managing your digital forms with QR codes.",
+    "autoRedirect": "Automatically redirecting to dashboard in {count} seconds...",
+    "goToDashboard": "Go to Dashboard",
+    "nextSteps": "Next steps:",
+    "createFirstForm": "Create your first form",
+    "generateQRCode": "Generate QR codes for easy sharing",
+    "manageSubmissions": "Manage form submissions via email",
+    "emailConfirmationFailed": "Email Confirmation Failed",
+    "emailConfirmationError": "There was an error confirming your email address.",
+    "possibleReasons": "Possible reasons:",
+    "linkExpired": "The confirmation link has expired",
+    "linkAlreadyUsed": "The link has already been used",
+    "emailTemplateError": "The email template configuration is incorrect",
+    "networkIssues": "Network connectivity issues",
+    "debugInfo": "Debug info:",
+    "tokenHash": "Token hash",
+    "type": "Type",
+    "error": "Error",
+    "present": "Present",
+    "missing": "Missing",
+    "unknown": "Unknown",
+    "tryAgainMessage": "Please try requesting a new confirmation email or contact support if the problem persists.",
+    "signInRequestNew": "Sign In / Request New Email",
+    "autoRedirectFallback": "Automatically redirecting to dashboard in {count} seconds...",
+    "accessDenied": "Access denied",
+    "pleaseSignIn": "Please sign in to continue",
+    "signIn": "Sign In"
+
+  },
+  "navigation": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "forms": "Forms",
+    "createForm": "Create Form",
+    "myForms": "My Forms",
+    "profile": "Profile",
+    "account": "Account",
+    "comments": "Comments",
+    "feedback": "Feedback"
+  },
+  "landing": {
+    "hero": {
+      "title": "Digital Forms with QR Codes",
+      "subtitle": "Create digital forms with QR codes for easy sharing. Form submissions are automatically routed via email with attachments.",
+      "getStarted": "Get Started",
+      "learnMore": "Learn More",
+      "watchDemo": "Watch Demo"
+    },
+    "features": {
+      "title": "Powerful Features",
+      "subtitle": "Create, Share, Collect - All-in-one form solution",
+      "dragDrop": {
+        "title": "Drag & Drop Form Builder",
+        "description": "Intuitive drag-and-drop interface to create complex forms easily"
+      },
+      "qrCode": {
+        "title": "Instant QR Code Generation",
+        "description": "Automatically generate QR codes for each form for mobile access"
+      },
+      "email": {
+        "title": "Automatic Email Delivery",
+        "description": "Automatically send email notifications with file attachments after form submission"
+      },
+      "secure": {
+        "title": "Enterprise-grade Security",
+        "description": "Secure authentication and data protection powered by Supabase"
+      },
+      "responsive": {
+        "title": "Responsive Design",
+        "description": "Perfect adaptation for desktop, tablet, and mobile devices"
+      },
+      "analytics": {
+        "title": "Data Analytics",
+        "description": "Real-time form submission statistics and analytics reports"
+      }
+    },
+    "cta": {
+      "title": "Ready to get started?",
+      "subtitle": "Create your first digital form today",
+      "button": "Start Free"
+    }
+  },
+  "dashboard": {
+    "title": "My Forms",
+    "welcome": "Welcome back",
+    "subtitle": "Manage your forms and view statistics",
+    "stats": {
+      "totalForms": "Total Forms",
+      "totalSubmissions": "Total Submissions",
+      "thisMonth": "This Month",
+      "activeforms": "Active Forms"
+    },
+    "recentForms": "Recent Forms",
+    "recentSubmissions": "Recent Submissions",
+    "createFirstForm": "Create your first form to start collecting responses",
+    "noForms": "No forms yet",
+    "noDescription": "No description provided",
+    "getStarted": "Get Started",
+    "viewAll": "View All",
+    "created": "Created"
+  },
+  "forms": {
+    "title": "My Forms",
+    "create": "Create Form",
+    "edit": "Edit Form",
+    "update": "Update Form",
+    "preview": "Preview",
+    "duplicate": "Duplicate",
+    "delete": "Delete Form",
+    "share": "Share Form",
+    "qrCode": "QR Code",
+    "submissions": "Submissions",
+    "settings": "Form Settings",
+    "submitAnother": "Submit Another Form",
+    "fieldCount": "Field Count",
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "draft": "Draft"
+    },
+    "fields": {
+      "overview": "Form Overview",
+      "title": "Form Title",
+      "formInfo": "Form Information",
+      "description": "Form Description",
+      "formInfoDescription": "Set up your form's basic details and email notification preferences.",
+      "emailRecipient": "Email Recipient",
+      "emailSubject": "Email Subject",
+      "addField": "Add Field",
+      "titlePlaceholder": "Enter form title",
+      "descriptionPlaceholder": "Enter form description",
+      "emailRecipientPlaceholder": "Enter recipient email",
+      "emailSubjectPlaceholder": "Enter email subject",
+      "fieldTypes": {
+        "text": "Text Input",
+        "textarea": "Textarea",
+        "email": "Email",
+        "number": "Number",
+        "phone": "Phone",
+        "select": "Dropdown",
+        "multiselect": "Multi-select",
+        "radio": "Radio Button",
+        "checkbox": "Checkbox",
+        "date": "Date",
+        "time": "Time",
+        "file": "File Upload",
+        "url": "URL"
+      },
+      "properties": {
+        "label": "Field Label",
+        "placeholder": "Placeholder",
+        "required": "Required Field",
+        "helpText": "Help Text",
+        "options": "Options",
+        "addOption": "Add Option",
+        "defaultValue": "Default Value",
+        "validation": "Validation Rules",
+        "type": "Field Type",
+        "labelPlaceholder": "Enter field label",
+        "placeholderPlaceholder": "Enter placeholder text",
+        "dropdownOptions": "Dropdown Options",
+        "optionPlaceholder": "Option {{number}}",
+        "noOptionsMessage": "No options added yet. Click \"Add Option\" to add dropdown choices."
+      }
+    },
+    "fileConstraints": {
+      "maxSize": "Max file size",
+      "allowedTypes": "Allowed file types"
+    },
+    "builder": {
+      "title": "Form Builder",
+      "dragHere": "Add form fields to build your form",
+      "preview": "Preview Mode",
+      "edit": "Edit Mode",
+      "noFields": "No fields added yet",
+      "noFieldsDescription": "Click \"Add Field\" to start building your form. At least one field is required to create a form."
+    },
+    "sharing": {
+      "title": "Share Form",
+      "link": "Form Link",
+      "qrCode": "QR Code",
+      "copyLink": "Copy Link",
+      "downloadQR": "Download QR Code",
+      "embedCode": "Embed Code"
+    }
+  },
+  "submissions": {
+    "title": "Submissions",
+    "noSubmissions": "No submissions yet",
+    "submittedAt": "Submitted At",
+    "ipAddress": "IP Address",
+    "viewDetails": "View Details",
+    "export": "Export Data",
+    "filter": "Filter",
+    "dateRange": "Date Range"
+  },
+  "profile": {
+    "title": "Profile",
+    "name": "Name",
+    "email": "Email",
+    "avatar": "Avatar",
+    "changePassword": "Change Password",
+    "currentPassword": "Current Password",
+    "newPassword": "New Password",
+    "confirmNewPassword": "Confirm New Password",
+    "updateProfile": "Update Profile",
+    "deleteAccount": "Delete Account",
+    "dangerZone": "Danger Zone"
+  },
+  "email": {
+    "newSubmission": "New Form Submission",
+    "submittedAt": "Submitted at",
+    "submissionDetails": "Submission Details",
+    "field": "Field",
+    "value": "Value",
+    "notProvided": "(not provided)",
+    "autoGenerated": "This email was automatically generated from your form submission system.",
+    "attachmentsIncluded": "This email contains attachments",
+    "attachmentsNote": "Please check the email attachments for uploaded files.",
+    "attachment": " attachment",
+    "attachments": " attachments",
+    "noFiles": "(no files)"
+  },
+  "validation": {
+    "titleRequired": "Form title is required",
+    "titleTooLong": "Title must be less than 100 characters",
+    "emailRequired": "Email recipient is required",
+    "emailInvalid": "Please enter a valid email address",
+    "fieldsRequired": "At least one field is required. Please add a field to your form.",
+    "fieldLabelRequired": "All fields must have a label. Please check your form fields.",
+    "fieldLabelsRequired": "All fields must have a label. Please check your form fields.",
+    "selectOptionsRequired": "Dropdown fields must have at least one option. Please add options to your dropdown fields.",
+    "generic": "Invalid form data"
+  },
+  "errors": {
+    "generic": "An error occurred",
+    "networkError": "Network connection error",
+    "notFound": "Page not found",
+    "unauthorized": "Unauthorized access",
+    "forbidden": "Access forbidden",
+    "serverError": "Server error",
+    "validationError": "Data validation failed",
+    "formNotFound": "Form not found",
+    "formNotFoundDescription": "This form doesn't exist or has been deactivated",
+    "submissionFailed": "Submission failed",
+    "fileUploadFailed": "File upload failed",
+    "fileTooLarge": "File too large",
+    "invalidFileType": "Invalid file type",
+    "copyLinkFailed": "Failed to copy link",
+    "fieldRequired": "This field is required",
+    "invalidEmail": "Please enter a valid email address",
+    "formValidationFailed": "Please fix the errors before submitting",
+    "failedToLike": "Failed to like comment",
+    "failedToLoadComment": "Failed to load comment",
+    "failedToLoadResponses": "Failed to load responses"
+  },
+  "comments": {
+    "title": "Comments & Feedback",
+    "subtitle": "Share your thoughts, report bugs, or suggest improvements",
+    "create": "New Comment",
+    "edit": "Edit Comment",
+    "update": "Update Comment", 
+    "delete": "Delete Comment",
+    "viewAll": "View All Comments",
+    "noComments": "No comments yet",
+    "noCommentsDescription": "Be the first to share your feedback!",
+    "myComments": "My Comments",
+    "allComments": "All Comments",
+    "notFound": "Comment not found",
+    "form": {
+      "title": "Title",
+      "content": "Content",
+      "category": "Category",
+      "priority": "Priority",
+      "titlePlaceholder": "Enter a descriptive title...",
+      "contentPlaceholder": "Share your thoughts, feedback, or suggestions..."
+    },
+    "categories": {
+      "general": "General",
+      "bug": "Bug Report",
+      "feature": "Feature Request",
+      "improvement": "Improvement",
+      "question": "Question"
+    },
+    "priorities": {
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High",
+      "urgent": "Urgent"
+    },
+    "status": {
+      "open": "Open",
+      "in_progress": "In Progress",
+      "resolved": "Resolved",
+      "closed": "Closed"
+    },
+    "filters": {
+      "all": "All",
+      "byCategory": "By Category",
+      "byStatus": "By Status",
+      "byPriority": "By Priority",
+      "myComments": "My Comments"
+    },
+    "sort": {
+      "newest": "Newest First",
+      "oldest": "Oldest First",
+      "priority": "Priority",
+      "status": "Status"
+    },
+    "actions": {
+      "reply": "Reply",
+      "share": "Share",
+      "report": "Report"
+    },
+    "meta": {
+      "postedBy": "Posted by",
+      "createdAt": "Created",
+      "updatedAt": "Updated",
+      "ago": "ago"
+    },
+    "responses": {
+      "title": "Add Response",
+      "placeholder": "Write your response...",
+      "submit": "Post Response",
+      "submitting": "Posting...",
+      "count": "Responses",
+      "noResponses": "No responses yet. Be the first to respond!",
+      "view": "View"
+    }
+  },
+  "success": {
+    "formCreated": "Form created successfully",
+    "formUpdated": "Form updated successfully",
+    "formDeleted": "Form deleted successfully",
+    "formSubmitted": "Form submitted successfully!",
+    "formSubmittedDescription": "Thank you for your submission. We have received your information and will get back to you soon.",
+    "profileUpdated": "Profile updated successfully",
+    "passwordChanged": "Password changed successfully",
+    "linkCopied": "Link copied to clipboard",
+    "emailSent": "Email sent successfully",
+    "loginSuccess": "Successfully signed in",
+    "logoutSuccess": "Successfully logged out",
+    "commentCreated": "Comment posted successfully",
+    "commentUpdated": "Comment updated successfully",
+    "commentDeleted": "Comment deleted successfully",
+    "responseCreated": "Response added successfully"
+  }
+} 

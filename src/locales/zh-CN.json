@@ -1,0 +1,415 @@
+{
+  "app": {
+    "name": "灵狐快码",
+    "tagline": "数字化表单与二维码"
+  },
+  "common": {
+    "loading": "加载中...",
+    "save": "保存",
+    "cancel": "取消",
+    "delete": "删除",
+    "edit": "编辑",
+    "create": "创建",
+    "back": "返回",
+    "next": "下一步",
+    "previous": "上一步",
+    "submit": "提交",
+    "submitting": "提交中...",
+    "search": "搜索",
+    "filter": "筛选",
+    "sort": "排序",
+    "close": "关闭",
+    "open": "打开",
+    "copy": "复制",
+    "share": "分享",
+    "download": "下载",
+    "upload": "上传",
+    "select": "选择",
+    "required": "必填",
+    "optional": "可选",
+    "yes": "是",
+    "no": "否",
+    "confirm": "确认",
+    "settings": "设置",
+    "help": "帮助",
+    "language": "语言",
+    "field": "字段",
+    "fields": "字段",
+    "actions": "操作",
+    "poweredBy": "技术支持",
+    "backToHome": "返回首页"
+  },
+  "auth": {
+    "login": "登录",
+    "logout": "登出",
+    "register": "注册",
+    "welcomeTo": "欢迎使用",
+    "email": "邮箱",
+    "password": "密码",
+    "confirmPassword": "确认密码",
+    "forgotPassword": "忘记密码？",
+    "signInWithEmail": "使用邮箱登录",
+    "signUpWithEmail": "使用邮箱注册",
+    "alreadyHaveAccount": "已有账户？",
+    "dontHaveAccount": "没有账户？",
+    "resetPassword": "重置密码",
+    "checkEmail": "请检查您的邮箱",
+    "invalidCredentials": "用户名或密码错误",
+    "emailRequired": "请输入邮箱地址",
+    "passwordRequired": "请输入密码",
+    "weakPassword": "密码过于简单",
+    "emailInvalid": "邮箱格式不正确",
+    "signInDescription": "登录以创建和管理您的数字表单",
+    "emailPlaceholder": "请输入您的邮箱",
+    "passwordPlaceholder": "请输入您的密码",
+    "namePlaceholder": "请输入您的姓名",
+    "emailConfirmed": "邮箱验证成功！",
+    "emailConfirmedDescription": "您的邮箱已成功验证。欢迎使用灵狐快码！",
+    "accountActivated": "您的账户已激活",
+    "canStartCreating": "您现在可以开始创建和管理带二维码的数字表单了。",
+    "autoRedirect": "将在 {count} 秒后自动跳转到控制台...",
+    "goToDashboard": "前往控制台",
+    "nextSteps": "下一步操作：",
+    "createFirstForm": "创建您的第一个表单",
+    "generateQRCode": "生成二维码便于分享",
+    "manageSubmissions": "通过邮件管理表单提交",
+    "emailConfirmationFailed": "邮箱验证失败",
+    "emailConfirmationError": "验证您的邮箱地址时出现错误。",
+    "possibleReasons": "可能原因：",
+    "linkExpired": "验证链接已过期",
+    "linkAlreadyUsed": "链接已被使用过",
+    "emailTemplateError": "邮件模板配置错误",
+    "networkIssues": "网络连接问题",
+    "debugInfo": "调试信息：",
+    "tokenHash": "令牌哈希",
+    "type": "类型",
+    "error": "错误",
+    "present": "存在",
+    "missing": "缺失",
+    "unknown": "未知",
+    "tryAgainMessage": "请尝试重新请求验证邮件，如果问题持续存在请联系客服。",
+    "signInRequestNew": "登录 / 重新发送邮件",
+    "autoRedirectFallback": "将在 {count} 秒后自动跳转到控制台...",
+    "accessDenied": "访问被拒绝",
+    "pleaseSignIn": "请登录以继续",
+    "signIn": "登录"
+  },
+  "navigation": {
+    "home": "首页",
+    "dashboard": "控制台",
+    "forms": "表单",
+    "createForm": "创建表单",
+    "myForms": "我的表单",
+    "profile": "个人资料",
+    "account": "账户",
+    "comments": "评论反馈",
+    "feedback": "意见反馈"
+  },
+  "landing": {
+    "hero": {
+      "title": "数字化表单与二维码",
+      "subtitle": "轻松创建数字表单，生成二维码便于分享。表单提交将自动通过邮件发送，支持附件。",
+      "getStarted": "开始使用",
+      "learnMore": "了解更多",
+      "watchDemo": "观看演示"
+    },
+    "features": {
+      "title": "强大功能",
+      "subtitle": "创建、分享、收集 - 一站式表单解决方案",
+      "dragDrop": {
+        "title": "拖拽式表单构建",
+        "description": "直观的拖拽界面，轻松创建复杂表单"
+      },
+      "qrCode": {
+        "title": "即时二维码生成",
+        "description": "为每个表单自动生成二维码，便于移动端访问"
+      },
+      "email": {
+        "title": "邮件自动发送",
+        "description": "表单提交后自动发送邮件通知，支持文件附件"
+      },
+      "secure": {
+        "title": "企业级安全",
+        "description": "基于 Supabase 的安全认证和数据保护"
+      },
+      "responsive": {
+        "title": "响应式设计",
+        "description": "完美适配桌面端、平板和手机"
+      },
+      "analytics": {
+        "title": "数据分析",
+        "description": "实时查看表单提交统计和分析报告"
+      }
+    },
+    "cta": {
+      "title": "准备开始了吗？",
+      "subtitle": "立即创建您的第一个数字表单",
+      "button": "免费开始"
+    }
+  },
+  "dashboard": {
+    "title": "我的表单",
+    "welcome": "欢迎回来",
+    "subtitle": "管理您的表单和查看统计数据",
+    "stats": {
+      "totalForms": "总表单数",
+      "totalSubmissions": "总提交数",
+      "thisMonth": "本月",
+      "activeforms": "活跃表单"
+    },
+    "recentForms": "最近的表单",
+    "recentSubmissions": "最近的提交",
+    "createFirstForm": "创建您的第一个表单开始收集回复吧",
+    "noForms": "暂无表单",
+    "noDescription": "暂无描述",
+    "getStarted": "开始创建",
+    "viewAll": "查看全部",
+    "created": "创建于"
+  },
+  "forms": {
+    "title": "我的表单",
+    "create": "创建表单",
+    "edit": "编辑表单",
+    "update": "更新表单",
+    "preview": "预览",
+    "duplicate": "复制",
+    "delete": "删除表单",
+    "share": "分享表单",
+    "qrCode": "二维码",
+    "submissions": "提交",
+    "settings": "表单设置",
+    "submitAnother": "提交另一个表单",
+    "fieldCount": "字段数量",
+    "status": {
+      "active": "已激活",
+      "inactive": "未激活",
+      "draft": "草稿"
+    },
+    "fields": {
+      "overview": "表单概览",
+      "title": "表单标题",
+      "formInfo": "表单信息",
+      "description": "表单描述",
+      "formInfoDescription": "设置表单的基本信息和邮件通知偏好。",
+      "emailRecipient": "接收邮箱",
+      "emailSubject": "邮件主题",
+      "addField": "添加字段",
+      "titlePlaceholder": "请输入表单标题",
+      "descriptionPlaceholder": "请输入表单描述",
+      "emailRecipientPlaceholder": "请输入接收邮箱",
+      "emailSubjectPlaceholder": "请输入邮件主题",
+      "fieldTypes": {
+        "text": "单行文本",
+        "textarea": "多行文本",
+        "email": "邮箱",
+        "number": "数字",
+        "phone": "电话",
+        "select": "单选下拉",
+        "multiselect": "多选下拉",
+        "radio": "单选按钮",
+        "checkbox": "复选框",
+        "date": "日期",
+        "time": "时间",
+        "file": "文件上传",
+        "url": "网址"
+      },
+      "properties": {
+        "label": "字段标签",
+        "placeholder": "占位符",
+        "required": "必填字段",
+        "helpText": "帮助文本",
+        "options": "选项",
+        "addOption": "添加选项",
+        "defaultValue": "默认值",
+        "validation": "验证规则",
+        "type": "字段类型",
+        "labelPlaceholder": "请输入字段标签",
+        "placeholderPlaceholder": "请输入占位符文本",
+        "dropdownOptions": "下拉选项",
+        "optionPlaceholder": "选项 {{number}}",
+        "noOptionsMessage": "暂未添加选项。点击\"添加选项\"来添加下拉选择。"
+      }
+    },
+    "fileConstraints": {
+      "maxSize": "最大文件大小",
+      "allowedTypes": "支持的文件类型"
+    },
+    "builder": {
+      "title": "表单构建器",
+      "dragHere": "添加表单字段来构建您的表单",
+      "preview": "预览模式",
+      "edit": "编辑模式",
+      "noFields": "暂未添加字段",
+      "noFieldsDescription": "点击\"添加字段\"开始构建您的表单。至少需要一个字段才能创建表单。"
+    },
+    "sharing": {
+      "title": "分享表单",
+      "link": "表单链接",
+      "qrCode": "二维码",
+      "copyLink": "复制链接",
+      "downloadQR": "下载二维码",
+      "embedCode": "嵌入代码"
+    }
+  },
+  "submissions": {
+    "title": "提交记录",
+    "noSubmissions": "暂无提交记录",
+    "submittedAt": "提交时间",
+    "ipAddress": "IP地址",
+    "viewDetails": "查看详情",
+    "export": "导出数据",
+    "filter": "筛选",
+    "dateRange": "日期范围"
+  },
+  "profile": {
+    "title": "个人资料",
+    "name": "姓名",
+    "email": "邮箱",
+    "avatar": "头像",
+    "changePassword": "修改密码",
+    "currentPassword": "当前密码",
+    "newPassword": "新密码",
+    "confirmNewPassword": "确认新密码",
+    "updateProfile": "更新资料",
+    "deleteAccount": "删除账户",
+    "dangerZone": "危险操作"
+  },
+  "email": {
+    "newSubmission": "新表单提交",
+    "submittedAt": "提交时间",
+    "submissionDetails": "提交详情",
+    "field": "字段",
+    "value": "值",
+    "notProvided": "(未提供)",
+    "autoGenerated": "此邮件由您的表单提交系统自动生成。",
+    "attachmentsIncluded": "此邮件包含附件",
+    "attachmentsNote": "请查看邮件附件中的上传文件。",
+    "attachment": "个附件",
+    "attachments": "个附件",
+    "noFiles": "(无文件)"
+  },
+  "validation": {
+    "titleRequired": "表单标题为必填项",
+    "titleTooLong": "标题长度不能超过100个字符",
+    "emailRequired": "邮箱接收者为必填项",
+    "emailInvalid": "请输入有效的邮箱地址",
+    "fieldsRequired": "至少需要一个字段。请为您的表单添加字段。",
+    "fieldLabelRequired": "所有字段都必须有标签。请检查您的表单字段。",
+    "fieldLabelsRequired": "所有字段都必须有标签。请检查您的表单字段。",
+    "selectOptionsRequired": "下拉字段必须至少有一个选项。请为您的下拉字段添加选项。",
+    "generic": "表单数据无效"
+  },
+  "errors": {
+    "generic": "出现了一个错误",
+    "networkError": "网络连接错误",
+    "notFound": "页面未找到",
+    "unauthorized": "未授权访问",
+    "forbidden": "禁止访问",
+    "serverError": "服务器错误",
+    "validationError": "数据验证失败",
+    "formNotFound": "表单未找到",
+    "formNotFoundDescription": "此表单不存在或已被停用",
+    "submissionFailed": "提交失败",
+    "fileUploadFailed": "文件上传失败",
+    "fileTooLarge": "文件过大",
+    "invalidFileType": "文件类型不支持",
+    "copyLinkFailed": "复制链接失败",
+    "fieldRequired": "此字段为必填项",
+    "invalidEmail": "请输入有效的邮箱地址",
+    "formValidationFailed": "请修复错误后再提交",
+    "failedToLike": "点赞失败",
+    "failedToLoadComment": "加载评论失败",
+    "failedToLoadResponses": "加载回复失败"
+  },
+  "comments": {
+    "title": "评论反馈",
+    "subtitle": "分享您的想法、报告问题或提出改进建议",
+    "create": "新建评论",
+    "edit": "编辑评论",
+    "update": "更新评论",
+    "delete": "删除评论",
+    "viewAll": "查看所有评论",
+    "noComments": "暂无评论",
+    "noCommentsDescription": "成为第一个分享反馈的人！",
+    "myComments": "我的评论",
+    "allComments": "所有评论",
+    "notFound": "评论未找到",
+    "form": {
+      "title": "标题",
+      "content": "内容",
+      "category": "分类",
+      "priority": "优先级",
+      "titlePlaceholder": "请输入描述性标题...",
+      "contentPlaceholder": "分享您的想法、反馈或建议..."
+    },
+    "categories": {
+      "general": "一般",
+      "bug": "错误报告",
+      "feature": "功能请求",
+      "improvement": "改进建议",
+      "question": "问题咨询"
+    },
+    "priorities": {
+      "low": "低",
+      "medium": "中",
+      "high": "高",
+      "urgent": "紧急"
+    },
+    "status": {
+      "open": "开放",
+      "in_progress": "处理中",
+      "resolved": "已解决",
+      "closed": "已关闭"
+    },
+    "filters": {
+      "all": "全部",
+      "byCategory": "按分类",
+      "byStatus": "按状态",
+      "byPriority": "按优先级",
+      "myComments": "我的评论"
+    },
+    "sort": {
+      "newest": "最新优先",
+      "oldest": "最早优先",
+      "priority": "优先级",
+      "status": "状态"
+    },
+    "actions": {
+      "reply": "回复",
+      "share": "分享",
+      "report": "举报"
+    },
+    "meta": {
+      "postedBy": "发布者",
+      "createdAt": "创建时间",
+      "updatedAt": "更新时间",
+      "ago": "前"
+    },
+    "responses": {
+      "title": "添加回复",
+      "placeholder": "写下您的回复...",
+      "submit": "发布回复",
+      "submitting": "发布中...",
+      "count": "回复",
+      "noResponses": "暂无回复。成为第一个回复的人！",
+      "view": "查看"
+    }
+  },
+  "success": {
+    "formCreated": "表单创建成功",
+    "formUpdated": "表单更新成功",
+    "formDeleted": "表单删除成功",
+    "formSubmitted": "表单提交成功！",
+    "formSubmittedDescription": "感谢您的提交。我们已收到您的信息，会尽快与您联系。",
+    "profileUpdated": "资料更新成功",
+    "passwordChanged": "密码修改成功",
+    "linkCopied": "链接已复制",
+    "emailSent": "邮件发送成功",
+    "loginSuccess": "登录成功",
+    "logoutSuccess": "登出成功",
+    "commentCreated": "评论发布成功",
+    "commentUpdated": "评论更新成功",
+    "commentDeleted": "评论删除成功",
+    "responseCreated": "回复添加成功"
+  }
+}
