@@ -37,7 +37,8 @@
     "fields": "Fields",
     "actions": "Actions",
     "poweredBy": "Powered by",
-    "backToHome": "Back to Home"
+    "backToHome": "Back to Home",
+    "contactSupport": "Contact Support"
   },
   "auth": {
     "login": "Login",
@@ -53,7 +54,7 @@
     "alreadyHaveAccount": "Already have an account?",
     "dontHaveAccount": "Don't have an account?",
     "resetPassword": "Reset Password",
-    "checkEmail": "Please check your email",
+    "checkRegistrationEmail": "Please check your email and click the link to complete registration",
     "invalidCredentials": "Invalid email or password",
     "emailRequired": "Email is required",
     "passwordRequired": "Password is required",
@@ -92,7 +93,10 @@
     "autoRedirectFallback": "Automatically redirecting to dashboard in {count} seconds...",
     "accessDenied": "Access denied",
     "pleaseSignIn": "Please sign in to continue",
-    "signIn": "Sign In"
+    "signIn": "Sign In",
+    "emailVerificationNote": "A verification email will be sent to confirm your account",
+    "termsText": "By continuing, you agree to our terms of service and privacy policy",
+    "needHelp": "Need help?"
 
   },
   "navigation": {

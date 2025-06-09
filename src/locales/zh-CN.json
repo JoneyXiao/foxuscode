@@ -37,7 +37,8 @@
     "fields": "字段",
     "actions": "操作",
     "poweredBy": "技术支持",
-    "backToHome": "返回首页"
+    "backToHome": "返回首页",
+    "contactSupport": "联系客服"
   },
   "auth": {
     "login": "登录",
@@ -53,7 +54,7 @@
     "alreadyHaveAccount": "已有账户？",
     "dontHaveAccount": "没有账户？",
     "resetPassword": "重置密码",
-    "checkEmail": "请检查您的邮箱",
+    "checkRegistrationEmail": "请查收验证邮件并点击链接完成注册",
     "invalidCredentials": "用户名或密码错误",
     "emailRequired": "请输入邮箱地址",
     "passwordRequired": "请输入密码",
@@ -92,7 +93,10 @@
     "autoRedirectFallback": "将在 {count} 秒后自动跳转到控制台...",
     "accessDenied": "访问被拒绝",
     "pleaseSignIn": "请登录以继续",
-    "signIn": "登录"
+    "signIn": "登录",
+    "emailVerificationNote": "我们将发送验证邮件以确认您的账户",
+    "termsText": "继续即表示您同意我们的服务条款和隐私政策",
+    "needHelp": "需要帮助？"
   },
   "navigation": {
     "home": "首页",
