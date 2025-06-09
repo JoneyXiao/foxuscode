@@ -367,10 +367,13 @@
     },
     "filters": {
       "all": "全部",
+      "byUser": "按用户",
       "byCategory": "按分类",
       "byStatus": "按状态",
       "byPriority": "按优先级",
-      "myComments": "我的评论"
+      "bySort": "按排序",
+      "myComments": "我的评论",
+      "clearAll": "清除所有筛选"
     },
     "sort": {
       "newest": "最新优先",
@@ -397,7 +400,12 @@
       "count": "回复",
       "noResponses": "暂无回复。成为第一个回复的人！",
       "view": "查看"
-    }
+    },
+    "search": {
+      "placeholder": "搜索评论..."
+    },
+    "noResultsFound": "未找到结果",
+    "tryDifferentFilters": "请尝试调整搜索条件或筛选器"
   },
   "success": {
     "formCreated": "表单创建成功",

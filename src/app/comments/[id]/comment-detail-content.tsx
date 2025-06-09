@@ -15,7 +15,9 @@ import {
   User, 
   Send,
   Edit2,
-  Trash2
+  Trash2,
+  Loader2,
+  UserCircle
 } from 'lucide-react';
 import { createClientComponentClient } from '@/lib/supabase';
 import { toast } from 'sonner';
@@ -207,31 +209,31 @@ export function CommentDetailContent({ commentId }: CommentDetailContentProps) {
 
   const getPriorityColor = (priority: string) => {
     switch (priority) {
-      case 'urgent': return 'bg-red-100 text-red-800';
-      case 'high': return 'bg-orange-100 text-orange-800';
-      case 'medium': return 'bg-yellow-100 text-yellow-800';
-      case 'low': return 'bg-green-100 text-green-800';
-      default: return 'bg-gray-100 text-gray-800';
+      case 'urgent': return 'bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-400';
+      case 'high': return 'bg-orange-100 text-orange-800 dark:bg-orange-900/20 dark:text-orange-400';
+      case 'medium': return 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400';
+      case 'low': return 'bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400';
+      default: return 'bg-gray-100 text-gray-800 dark:bg-gray-900/20 dark:text-gray-400';
     }
   };
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'open': return 'bg-blue-100 text-blue-800';
-      case 'in_progress': return 'bg-purple-100 text-purple-800';
-      case 'resolved': return 'bg-green-100 text-green-800';
-      case 'closed': return 'bg-gray-100 text-gray-800';
-      default: return 'bg-gray-100 text-gray-800';
+      case 'open': return 'bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400';
+      case 'in_progress': return 'bg-purple-100 text-purple-800 dark:bg-purple-900/20 dark:text-purple-400';
+      case 'resolved': return 'bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400';
+      case 'closed': return 'bg-gray-100 text-gray-800 dark:bg-gray-900/20 dark:text-gray-400';
+      default: return 'bg-gray-100 text-gray-800 dark:bg-gray-900/20 dark:text-gray-400';
     }
   };
 
   const getCategoryColor = (category: string) => {
     switch (category) {
-      case 'bug': return 'bg-red-100 text-red-800';
-      case 'feature': return 'bg-blue-100 text-blue-800';
-      case 'improvement': return 'bg-purple-100 text-purple-800';
-      case 'question': return 'bg-yellow-100 text-yellow-800';
-      default: return 'bg-gray-100 text-gray-800';
+      case 'bug': return 'bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-400';
+      case 'feature': return 'bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400';
+      case 'improvement': return 'bg-purple-100 text-purple-800 dark:bg-purple-900/20 dark:text-purple-400';
+      case 'question': return 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400';
+      default: return 'bg-gray-100 text-gray-800 dark:bg-gray-900/20 dark:text-gray-400';
     }
   };
 
@@ -241,10 +243,10 @@ export function CommentDetailContent({ commentId }: CommentDetailContentProps) {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center py-8">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">{t('common.loading')}</p>
+      <div className="flex items-center justify-center py-12">
+        <div className="text-center space-y-4">
+          <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-blue-600 mx-auto"></div>
+          <p className="text-muted-foreground">{t('common.loading')}</p>
         </div>
       </div>
     );
@@ -252,52 +254,62 @@ export function CommentDetailContent({ commentId }: CommentDetailContentProps) {
 
   if (!comment) {
     return (
-      <div className="text-center py-8">
-        <p className="text-gray-600">{t('comments.notFound')}</p>
-        <Link href="/comments">
-          <Button variant="outline" className="mt-4">
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            {t('common.back')}
-          </Button>
-        </Link>
+      <div className="container mx-auto px-4 py-8 max-w-4xl">
+        <div className="text-center space-y-6">
+          <div className="mx-auto w-16 h-16 bg-muted rounded-full flex items-center justify-center">
+            <MessageSquare className="h-8 w-8 text-muted-foreground" />
+          </div>
+          <div className="space-y-2">
+            <h3 className="text-xl font-semibold">{t('comments.notFound')}</h3>
+            <p className="text-muted-foreground">{t('comments.commentNotFoundDescription')}</p>
+          </div>
+          <Link href="/comments">
+            <Button variant="outline" size="lg">
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              {t('common.back')}
+            </Button>
+          </Link>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="space-y-6">
-      {/* Back Button */}
-      <Link href="/comments">
-        <Button variant="outline" size="sm">
-          <ArrowLeft className="w-4 h-4 mr-2" />
-          {t('common.back')}
-        </Button>
-      </Link>
+    <div className="container mx-auto px-4 py-6 space-y-6 max-w-4xl">
+      {/* Back Button - Mobile optimized */}
+      <div className="sticky top-4 z-10">
+        <Link href="/comments">
+          <Button variant="outline" size="lg" className="shadow-lg bg-background/95 backdrop-blur-sm">
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            <span className="sm:inline">{t('common.back')}</span>
+          </Button>
+        </Link>
+      </div>
 
-      {/* Main Comment */}
-      <Card>
-        <CardHeader>
-          <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
-            <div className="flex-1">
-              <CardTitle className="text-xl mb-2">{comment.title}</CardTitle>
-              <div className="flex flex-wrap gap-2 mb-3">
-                <Badge className={getCategoryColor(comment.category)}>
+      {/* Main Comment - Enhanced mobile layout */}
+      <Card className="border-l-4 border-l-blue-500 shadow-lg">
+        <CardHeader className="pb-4">
+          <div className="flex flex-col space-y-4 sm:flex-row sm:justify-between sm:items-start sm:space-y-0">
+            <div className="flex-1 min-w-0">
+              <CardTitle className="text-xl mb-4 leading-tight">{comment.title}</CardTitle>
+              <div className="flex flex-wrap gap-2">
+                <Badge className={`${getCategoryColor(comment.category)} text-xs font-medium px-3 py-1`}>
                   {t(`comments.categories.${comment.category}`)}
                 </Badge>
-                <Badge className={getPriorityColor(comment.priority)}>
+                <Badge className={`${getPriorityColor(comment.priority)} text-xs font-medium px-3 py-1`}>
                   {t(`comments.priorities.${comment.priority}`)}
                 </Badge>
-                <Badge className={getStatusColor(comment.status)}>
+                <Badge className={`${getStatusColor(comment.status)} text-xs font-medium px-3 py-1`}>
                   {t(`comments.status.${comment.status}`)}
                 </Badge>
               </div>
             </div>
             {user?.id === comment.user_id && (
-              <div className="flex gap-2">
-                <Button variant="ghost" size="sm">
+              <div className="flex gap-2 shrink-0">
+                <Button variant="ghost" size="sm" className="h-10 w-10 p-0">
                   <Edit2 className="w-4 h-4" />
                 </Button>
-                <Button variant="ghost" size="sm">
+                <Button variant="ghost" size="sm" className="h-10 w-10 p-0 text-red-600 hover:text-red-700">
                   <Trash2 className="w-4 h-4" />
                 </Button>
               </div>
@@ -305,45 +317,58 @@ export function CommentDetailContent({ commentId }: CommentDetailContentProps) {
           </div>
         </CardHeader>
         <CardContent>
-          <div className="prose max-w-none mb-6">
-            <p className="text-gray-700 whitespace-pre-wrap">{comment.content}</p>
-          </div>
-          
-          <div className="flex items-center justify-between pt-4 border-t">
-            <div className="flex items-center gap-4 text-sm text-gray-500">
-              <div className="flex items-center gap-1">
-                <User className="w-4 h-4" />
-                <span>{comment.users.name || comment.users.email}</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <Calendar className="w-4 h-4" />
-                <span>{formatDate(comment.created_at)}</span>
-              </div>
+          <div className="space-y-6">
+            <div className="prose max-w-none">
+              <p className="text-sm leading-relaxed whitespace-pre-wrap">{comment.content}</p>
             </div>
             
-            <div className="flex items-center gap-4">
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={handleLike}
-                className={comment.isLikedByUser ? 'text-red-600' : ''}
-              >
-                <Heart className={`w-4 h-4 mr-1 ${comment.isLikedByUser ? 'fill-current' : ''}`} />
-                <span>{comment.likeCount}</span>
-              </Button>
-              <div className="flex items-center gap-1 text-gray-500">
-                <MessageSquare className="w-4 h-4" />
-                <span>{comment.responseCount}</span>
+            <div className="pt-4 border-t space-y-4">
+              {/* Author Info - Mobile optimized */}
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-muted rounded-full flex items-center justify-center">
+                    <UserCircle className="w-6 h-6 text-muted-foreground" />
+                  </div>
+                  <div>
+                    <p className="font-medium text-sm">
+                      {comment.users.name || comment.users.email}
+                    </p>
+                    <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                      <Calendar className="w-3 h-3" />
+                      <span>{formatDate(comment.created_at)}</span>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Actions - Mobile optimized */}
+                <div className="flex items-center gap-4">
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={handleLike}
+                    className={`h-10 px-4 ${comment.isLikedByUser ? 'text-red-600' : 'text-muted-foreground'} hover:text-red-600`}
+                  >
+                    <Heart className={`w-4 h-4 mr-2 ${comment.isLikedByUser ? 'fill-current' : ''}`} />
+                    <span className="font-medium">{comment.likeCount}</span>
+                  </Button>
+                  <div className="flex items-center gap-2 text-muted-foreground">
+                    <MessageSquare className="w-4 h-4" />
+                    <span className="font-medium text-sm">{comment.responseCount}</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </CardContent>
       </Card>
 
-      {/* Add Response */}
+      {/* Add Response - Enhanced mobile form */}
       <Card>
         <CardHeader>
-          <CardTitle className="text-lg">{t('comments.responses.title')}</CardTitle>
+          <CardTitle className="flex items-center gap-2 text-lg">
+            <MessageSquare className="h-5 w-5" />
+            {t('comments.responses.title')}
+          </CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
@@ -352,68 +377,95 @@ export function CommentDetailContent({ commentId }: CommentDetailContentProps) {
               value={newResponse}
               onChange={(e) => setNewResponse(e.target.value)}
               rows={4}
+              className="text-base resize-none"
             />
             <Button 
               onClick={handleSubmitResponse}
               disabled={!newResponse.trim() || responseLoading}
+              className="w-full sm:w-auto h-11 px-6 text-sm"
+              size="lg"
             >
               {responseLoading ? (
-                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                <>
+                  <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                  {t('comments.responses.submitting')}
+                </>
               ) : (
-                <Send className="w-4 h-4 mr-2" />
+                <>
+                  <Send className="w-4 h-4 mr-2" />
+                  {t('comments.responses.submit')}
+                </>
               )}
-              {responseLoading ? t('comments.responses.submitting') : t('comments.responses.submit')}
             </Button>
           </div>
         </CardContent>
       </Card>
 
-      {/* Responses */}
+      {/* Responses - Enhanced mobile layout */}
       <div className="space-y-4">
-        <h3 className="text-lg font-semibold">
-          {t('comments.responses.count')} ({responses.length})
-        </h3>
+        <div className="flex items-center gap-2">
+          <h3 className="text-xl font-semibold">
+            {t('comments.responses.count')}
+          </h3>
+          <Badge variant="secondary" className="px-2 py-1">
+            {responses.length}
+          </Badge>
+        </div>
         
         {responses.length === 0 ? (
           <Card>
-            <CardContent className="py-8 text-center text-gray-500">
-              {t('comments.responses.noResponses')}
+            <CardContent className="py-12 text-center">
+              <div className="space-y-4">
+                <div className="mx-auto w-12 h-12 bg-muted rounded-full flex items-center justify-center">
+                  <MessageSquare className="h-6 w-6 text-muted-foreground" />
+                </div>
+                <div className="space-y-2">
+                  <h4 className="font-medium">{t('comments.responses.noResponses')}</h4>
+                  <p className="text-sm text-muted-foreground">{t('comments.responses.beFirstToRespond')}</p>
+                </div>
+              </div>
             </CardContent>
           </Card>
         ) : (
-          responses.map((response) => (
-            <Card key={response.id}>
-              <CardContent className="pt-6">
-                <div className="prose max-w-none mb-4">
-                  <p className="text-gray-700 whitespace-pre-wrap">{response.content}</p>
-                </div>
-                
-                <div className="flex items-center justify-between text-sm text-gray-500">
-                  <div className="flex items-center gap-4">
-                    <div className="flex items-center gap-1">
-                      <User className="w-4 h-4" />
-                      <span>{response.users.name || response.users.email}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" />
-                      <span>{formatDate(response.created_at)}</span>
+          <div className="space-y-4">
+            {responses.map((response, index) => (
+              <Card key={response.id} className={`${index === 0 ? 'ring-2 ring-blue-100' : ''}`}>
+                <CardContent className="pt-6">
+                  <div className="space-y-4">
+                    <p className="text-sm leading-relaxed whitespace-pre-wrap">{response.content}</p>
+                    
+                    <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between pt-3 border-t">
+                      <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 bg-muted rounded-full flex items-center justify-center">
+                          <User className="w-4 h-4 text-muted-foreground" />
+                        </div>
+                        <div>
+                          <p className="font-medium text-sm">
+                            {response.users.name || response.users.email}
+                          </p>
+                          <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                            <Calendar className="w-3 h-3" />
+                            <span>{formatDate(response.created_at)}</span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {user?.id === response.user_id && (
+                        <div className="flex gap-2">
+                          <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
+                            <Edit2 className="w-3 h-3" />
+                          </Button>
+                          <Button variant="ghost" size="sm" className="h-8 w-8 p-0 text-red-600 hover:text-red-700">
+                            <Trash2 className="w-3 h-3" />
+                          </Button>
+                        </div>
+                      )}
                     </div>
                   </div>
-                  
-                  {user?.id === response.user_id && (
-                    <div className="flex gap-2">
-                      <Button variant="ghost" size="sm">
-                        <Edit2 className="w-3 h-3" />
-                      </Button>
-                      <Button variant="ghost" size="sm">
-                        <Trash2 className="w-3 h-3" />
-                      </Button>
-                    </div>
-                  )}
-                </div>
-              </CardContent>
-            </Card>
-          ))
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         )}
       </div>
     </div>

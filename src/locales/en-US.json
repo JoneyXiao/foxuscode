@@ -368,11 +368,19 @@
     },
     "filters": {
       "all": "All",
+      "byUser": "By User",
       "byCategory": "By Category",
       "byStatus": "By Status",
       "byPriority": "By Priority",
-      "myComments": "My Comments"
+      "bySort": "By Sort",
+      "myComments": "My Comments",
+      "clearAll": "Clear All Filters"
     },
+    "search": {
+      "placeholder": "Search comments..."
+    },
+    "noResultsFound": "No results found",
+    "tryDifferentFilters": "Try adjusting your search or filters",
     "sort": {
       "newest": "Newest First",
       "oldest": "Oldest First",

@@ -9,7 +9,7 @@ import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
-import { Loader2, Mail, ArrowLeft, Eye, EyeOff, User, Lock, QrCode } from 'lucide-react';
+import { Loader2, Mail, ArrowLeft, Eye, EyeOff, User, Lock } from 'lucide-react';
 import { createClientComponentClient } from '@/lib/supabase';
 import { toast } from 'sonner';
 import { LanguageSwitcher } from '@/components/language-switcher';
@@ -90,15 +90,14 @@ export default function SignInPage() {
     // Show loading during hydration
     if (!isClient || !ready) {
         return (
-            <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-cyan-50">
-                <div className="text-center">
+            <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white">
+                <div className="text-center space-y-4">
                     <div className="relative">
-                        <div className="h-12 w-12 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                            <QrCode className="h-6 w-6 text-primary" />
+                        <div className="rounded-full bg-gradient-to-br from-blue-100 to-indigo-100 p-4">
+                            <Loader2 className="h-8 w-8 animate-spin text-blue-600" />
                         </div>
-                        <Loader2 className="h-4 w-4 animate-spin absolute top-2 right-2 text-primary" />
                     </div>
-                    <p className="text-muted-foreground text-sm">Loading...</p>
+                    <p className="text-muted-foreground font-medium">{t('common.loading')}</p>
                 </div>
             </div>
         );
